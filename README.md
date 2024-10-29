@@ -77,7 +77,7 @@ python3 synthesize_positive_cmds.py \
 | [CmdCaliper-Large](https://huggingface.co/CyCraftAI/CmdCaliper-large) |    0.335   |  89.9 | 95.65 |
 
 
-### Evaluation on CyPHER
+### Evaluation on [CyPHER](https://huggingface.co/datasets/CyCraftAI/CyPHER)
 - To reproduce the performance on the testing set of CyPHER as reported in the paper, you can evaluate different models using the following command:
 
 ```
