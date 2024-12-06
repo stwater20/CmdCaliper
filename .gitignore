@@ -3,3 +3,6 @@ credential_config.yaml
 **/.ipynb_checkpoints/
 *.swp
 *.ipynb
+test.ipynb
+dataset/
+output/
