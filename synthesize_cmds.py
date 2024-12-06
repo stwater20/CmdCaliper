@@ -30,7 +30,7 @@ if __name__ == "__main__":
 
     credential_config = load_yaml(args.path_to_credential_config)
     llm_pool = initialize_llm_pool(credential_config["llm_pool_info"])
-
+ 
     os.makedirs(args.path_to_output_dir, exist_ok=True)
     path_to_generation_logs = os.path.join(args.path_to_output_dir, args.generation_log_filename)
     path_to_synthesized_cmds = os.path.join(args.path_to_output_dir, args.synthesized_cmd_filename)
@@ -51,7 +51,6 @@ if __name__ == "__main__":
         batch_idx += 1
         sub_seed_cmds = random.sample(seed_cmds, k=args.fewshot_cmd_num)
         prompt = get_single_cmd_generation_prompt(sub_seed_cmds, args.cmd_generation_num)
-
         llm_engine, model_name = random.sample(llm_pool, k=1)[0]
         response = llm_engine.inference(
             prompt, model_name, 
@@ -65,6 +64,5 @@ if __name__ == "__main__":
             [response, model_name, new_generated_cmd_list, sub_seed_cmds]
         )
         seed_cmds.extend(new_generated_cmd_list)
-
         save_json(seed_cmds, path_to_synthesized_cmds)
         save_json(generation_logs, path_to_generation_logs)
