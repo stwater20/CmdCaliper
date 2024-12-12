@@ -36,7 +36,7 @@ class CommandRetriever:
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--batch-size", type=int, default=4)
-    parser.add_argument("--model-name", type=str, required=True)
+    parser.add_argument("--model-name", type=str, default="CyCraftAI/CmdCaliper-small")
     parser.add_argument("--device", type=str, default="cuda:0")
     parser.add_argument("--query-cmd", type=str, required=True, help="The command line query to search for similar commands.")
     parser.add_argument("--top-k", type=int, default=5, help="Number of similar commands to return.")
