@@ -1,0 +1,22 @@
+[
+    "sigcheck -n C:\\Windows\\System32\\ntoskrnl.exe -nobanner",
+    "'wmic volume where \"DriveType=3\" set Label=\"Confidential Data\"'",
+    "cscript \"C:\\Windows\\System32\\Printing_Admin_Scripts\\en-US\\pubprn.vbs\" \"\\\\printserver\\HPLaserJet\" ADD",
+    "schtasks /create /tn MalwareTask /tr \"C:\\Users\\User1\\Documents\\malware.exe\" /sc DAILY /st 08:00",
+    "powershell -Command \"Get-Process | Select-Object -Property Name, ID, CPU\"",
+    "xcopy /s /e /i C:\\source\\* D:\\backup\\ (date:dd-MM-yyyy)",
+    "C:\\WINDOWS\\system32\\rundll32.exe sysmain.dll,PfSvWsSwapAssessmentTask",
+    "wmic os get FreePhysicalMemory /value | findstr \"Data\" > C:\\memory\\_report.txt",
+    "sigcheck64.exe -accepteula -vt \"C:\\Windows\\System32\\ntdll.dll\"",
+    "reg add \"HKLM\\Software\\ExampleKey\" /v ExampleValue /t REG_SZ /d \"ExampleData\" /f",
+    "query.exe logonsession /list /username:company\\user28 /pw: mypassword /cachekms:1000 /v /port:9090",
+    "msiexec /i \"C:\\Users\\admin\\Downloads\\app_installer.msi\" /qn /l*v \"C:\\Users\\admin\\Downloads\\install_log.txt\"",
+    "icacls C:\\Users\\Public\\Documents /grant users:(F) > permissions.log",
+    "wmic service call enable root\\CIMV2\\Security\\MSADs_ServiceAccount\\EventLog\\Security /value:true",
+    "start chrome \"https://github.com/Microsoft/PowerShell-DSC\"",
+    "explorer shell:::{8982063F-2823-4915-B2DE-C2E2D6A31967}",
+    "setx path \"%path%;C:\\MyApps\\tools\" /M",
+    "netsh advfirewall firewall add rule name=\"My Custom Firewall Rule\" protocol=TCP dir=in localport=8080 remoteip=192.168.1.50 action=allow",
+    "\"dism.exe /online /enable-feature /featurename:NetFx3\"",
+    "wmic nic get adaptertype,macaddress"
+]

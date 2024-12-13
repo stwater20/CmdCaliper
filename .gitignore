@@ -2,5 +2,4 @@ credential_config.yaml
 **/__pycache__/
 **/.ipynb_checkpoints/
 *.swp
-dataset/
-output/
+

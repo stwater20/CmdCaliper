@@ -1,0 +1,22 @@
+{
+  "sigcheck -n C:\\Windows\\System32\\ntoskrnl.exe -nobanner": "certutil -verify C:\\Windows\\System32\\kernel32.dll -config -nobanner",
+  "'wmic volume where \"DriveType=3\" set Label=\"Confidential Data\"'": "diskpart /s \"C:\\Scripts\\set_volume_label.txt\"",
+  "cscript \"C:\\Windows\\System32\\Printing_Admin_Scripts\\en-US\\pubprn.vbs\" \"\\\\printserver\\HPLaserJet\" ADD": "powershell -ExecutionPolicy Bypass -File \"C:\\Windows\\System32\\Printing_Admin_Scripts\\en-US\\AddPrinter.ps1\" -PrinterName \"\\\\printserver\\CanonInkjet\" -Action Add",
+  "schtasks /create /tn MalwareTask /tr \"C:\\Users\\User1\\Documents\\malware.exe\" /sc DAILY /st 08:00": "at 08:00 /every:M T W Th F \"C:\\Users\\User1\\Downloads\\malware_v2.exe\"",
+  "powershell -Command \"Get-Process | Select-Object -Property Name, ID, CPU\"": "Get-Process | Where-Object { $_.CPU -gt 0 } | Format-Table ID, ProcessName",
+  "xcopy /s /e /i C:\\source\\* D:\\backup\\ (date:dd-MM-yyyy)": "robocopy C:\\source D:\\backup /MIR /COPY:DAT /XD temp",
+  "C:\\WINDOWS\\system32\\rundll32.exe sysmain.dll,PfSvWsSwapAssessmentTask": "START /MIN C:\\Windows\\System32\\msiexec.exe /X {GUID} /quiet",
+  "wmic os get FreePhysicalMemory /value | findstr \"Data\" > C:\\memory\\_report.txt": "PowerShell -Command \"Get-CimInstance Win32_OperatingSystem | Select-Object FreePhysicalMemory\" | Out-File C:\\memory\\report.txt",
+  "sigcheck64.exe -accepteula -vt \"C:\\Windows\\System32\\ntdll.dll\"": "certutil -hashfile \"D:\\Files\\example.dll\" SHA256",
+  "reg add \"HKLM\\Software\\ExampleKey\" /v ExampleValue /t REG_SZ /d \"ExampleData\" /f": "reg.exe add \"HKLM\\Software\\NewExample\" /v NewValue /t REG_DWORD /d 12345 /f",
+  "query.exe logonsession /list /username:company\\user28 /pw: mypassword /cachekms:1000 /v /port:9090": "whoami.exe /user /sid:DOMAIN\\user29 /password:mypassword123 /v /port:8080",
+  "msiexec /i \"C:\\Users\\admin\\Downloads\\app_installer.msi\" /qn /l*v \"C:\\Users\\admin\\Downloads\\install_log.txt\"": "start /wait \"C:\\Temp\\setup.exe\" /install /silent /log \"C:\\Temp\\install_details.log\"",
+  "icacls C:\\Users\\Public\\Documents /grant users:(F) > permissions.log": "takeown /f C:\\Users\\Public\\Documents /a > user_access.log",
+  "wmic service call enable root\\CIMV2\\Security\\MSADs_ServiceAccount\\EventLog\\Security /value:true": "powershell -Command \"Get-Service | Where-Object { $_.Name -eq 'MSADs_ServiceAccount' } | Set-Service -StartupType Automatic\"",
+  "start chrome \"https://github.com/Microsoft/PowerShell-DSC\"": "start firefox \"https://github.com/Microsoft/PowerShell-DSC\"",
+  "explorer shell:::{8982063F-2823-4915-B2DE-C2E2D6A31967}": "rundll32.exe shell32.dll,Control_RunDLL propsys.dll,Control_EventLog",
+  "setx path \"%path%;C:\\MyApps\\tools\" /M": "setx PATH \"C:\\Utilities; %PATH%\" /S",
+  "netsh advfirewall firewall add rule name=\"My Custom Firewall Rule\" protocol=TCP dir=in localport=8080 remoteip=192.168.1.50 action=allow": "netsh firewall add allowrule name=\"Custom Inbound Rule\" dir=in action=allow protocol=UDP localport=9090 remoteip=10.0.0.5",
+  "\"dism.exe /online /enable-feature /featurename:NetFx3\"": "start /wait powershell.exe -Command \"Enable-WindowsOptionalFeature -Online -FeatureName 'NetFx3Features'\"",
+  "wmic nic get adaptertype,macaddress": "get-ciminstance -ClassName Win32_NetworkAdapter | Select-Object AdapterType, MACAddress"
+}

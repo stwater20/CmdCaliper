@@ -1,0 +1,122 @@
+[
+  [
+    "<CMD> netstat -ano | findstr \"8080\" > C:\\logs\\network_connections.log  \n<CMD> schtasks /create /tn \"DailyBackup\" /tr \"C:\\Backup\\backup.bat\" /sc daily /st 02:00  \n<CMD> nmap -sS -O 192.168.1.0/24 -oN C:\\scan_results\\network_scan.txt  \n<CMD> curl -X POST \"https://api.example.com/endpoint\" -H \"Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9...\" -d \"{\\\"key1\\\":\\\"value1\\\", \\\"key2\\\":\\\"value2\\\"}\"  ",
+    "gpt-4o-mini",
+    [
+      "netstat -ano | findstr \"8080\" > C:\\logs\\network_connections.log",
+      "schtasks /create /tn \"DailyBackup\" /tr \"C:\\Backup\\backup.bat\" /sc daily /st 02:00",
+      "nmap -sS -O 192.168.1.0/24 -oN C:\\scan_results\\network_scan.txt",
+      "curl -X POST \"https://api.example.com/endpoint\" -H \"Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9...\" -d \"{\\\"key1\\\":\\\"value1\\\", \\\"key2\\\":\\\"value2\\\"}\""
+    ],
+    [
+      "setx path \"%path%;C:\\MyApps\\tools\" /M",
+      "powershell -Command \"Get-Process | Select-Object -Property Name, ID, CPU\"",
+      "wmic service call enable root\\CIMV2\\Security\\MSADs_ServiceAccount\\EventLog\\Security /value:true",
+      "\"dism.exe /online /enable-feature /featurename:NetFx3\"",
+      "xcopy /s /e /i C:\\source\\* D:\\backup\\ (date:dd-MM-yyyy)",
+      "explorer shell:::{8982063F-2823-4915-B2DE-C2E2D6A31967}",
+      "icacls C:\\Users\\Public\\Documents /grant users:(F) > permissions.log",
+      "netsh advfirewall firewall add rule name=\"My Custom Firewall Rule\" protocol=TCP dir=in localport=8080 remoteip=192.168.1.50 action=allow",
+      "reg add \"HKLM\\Software\\ExampleKey\" /v ExampleValue /t REG_SZ /d \"ExampleData\" /f",
+      "start chrome \"https://github.com/Microsoft/PowerShell-DSC\"",
+      "query.exe logonsession /list /username:company\\user28 /pw: mypassword /cachekms:1000 /v /port:9090",
+      "cscript \"C:\\Windows\\System32\\Printing_Admin_Scripts\\en-US\\pubprn.vbs\" \"\\\\printserver\\HPLaserJet\" ADD"
+    ]
+  ],
+  [
+    "<CMD> powershell -Command \"Get-Service | Where-Object { $_.Status -eq 'Running' } | Select-Object -Property DisplayName, ServiceName, Status\"\n<CMD> nmap -p 22,80,443 -sV 10.0.0.1 -oX C:\\scan_results\\port_scan.xml\n<CMD> reg add \"HKCU\\Software\\MyApp\" /v UserSettings /t REG_BINARY /d 01FF00223344AA /f\n<CMD> schtasks /create /tn BackupTask /tr \"C:\\Scripts\\backup_script.bat\" /sc WEEKLY /d MON /st 02:00 /ru User1 /rp MyPassword123!",
+    "gpt-4o-mini",
+    [
+      "powershell -Command \"Get-Service | Where-Object { $_.Status -eq 'Running' } | Select-Object -Property DisplayName, ServiceName, Status\"",
+      "nmap -p 22,80,443 -sV 10.0.0.1 -oX C:\\scan_results\\port_scan.xml",
+      "reg add \"HKCU\\Software\\MyApp\" /v UserSettings /t REG_BINARY /d 01FF00223344AA /f",
+      "schtasks /create /tn BackupTask /tr \"C:\\Scripts\\backup_script.bat\" /sc WEEKLY /d MON /st 02:00 /ru User1 /rp MyPassword123!"
+    ],
+    [
+      "powershell -Command \"Get-Process | Select-Object -Property Name, ID, CPU\"",
+      "nmap -sS -O 192.168.1.0/24 -oN C:\\scan_results\\network_scan.txt",
+      "reg add \"HKLM\\Software\\ExampleKey\" /v ExampleValue /t REG_SZ /d \"ExampleData\" /f",
+      "wmic nic get adaptertype,macaddress",
+      "netstat -ano | findstr \"8080\" > C:\\logs\\network_connections.log",
+      "C:\\WINDOWS\\system32\\rundll32.exe sysmain.dll,PfSvWsSwapAssessmentTask",
+      "msiexec /i \"C:\\Users\\admin\\Downloads\\app_installer.msi\" /qn /l*v \"C:\\Users\\admin\\Downloads\\install_log.txt\"",
+      "sigcheck -n C:\\Windows\\System32\\ntoskrnl.exe -nobanner",
+      "wmic service call enable root\\CIMV2\\Security\\MSADs_ServiceAccount\\EventLog\\Security /value:true",
+      "start chrome \"https://github.com/Microsoft/PowerShell-DSC\"",
+      "schtasks /create /tn MalwareTask /tr \"C:\\Users\\User1\\Documents\\malware.exe\" /sc DAILY /st 08:00",
+      "sigcheck64.exe -accepteula -vt \"C:\\Windows\\System32\\ntdll.dll\""
+    ]
+  ],
+  [
+    "<CMD> powershell -Command \"Get-EventLog -LogName Security | Where-Object {$_.EventID -eq 4624} | Select-Object -First 10 | Export-Csv -Path C:\\Logs\\login_events.csv -NoTypeInformation\"\n  \n<CMD> netstat -ano | findstr \":1433\" > C:\\Network\\sql_connections.txt\n\n<CMD> certutil -generateSSTFromWU C:\\Windows\\Temp\\WindowsUpdate.sst\n\n<CMD> \"C:\\Program Files\\SoftwareXYZ\\tool.exe\" --config \"C:\\Program Files\\SoftwareXYZ\\config.json\" --output \"C:\\Reports\\output_report.txt\" --verbose --retry 5",
+    "gpt-4o-mini",
+    [
+      "powershell -Command \"Get-EventLog -LogName Security | Where-Object {$_.EventID -eq 4624} | Select-Object -First 10 | Export-Csv -Path C:\\Logs\\login_events.csv -NoTypeInformation\"",
+      "netstat -ano | findstr \":1433\" > C:\\Network\\sql_connections.txt",
+      "certutil -generateSSTFromWU C:\\Windows\\Temp\\WindowsUpdate.sst",
+      "\"C:\\Program Files\\SoftwareXYZ\\tool.exe\" --config \"C:\\Program Files\\SoftwareXYZ\\config.json\" --output \"C:\\Reports\\output_report.txt\" --verbose --retry 5"
+    ],
+    [
+      "setx path \"%path%;C:\\MyApps\\tools\" /M",
+      "query.exe logonsession /list /username:company\\user28 /pw: mypassword /cachekms:1000 /v /port:9090",
+      "reg add \"HKCU\\Software\\MyApp\" /v UserSettings /t REG_BINARY /d 01FF00223344AA /f",
+      "schtasks /create /tn \"DailyBackup\" /tr \"C:\\Backup\\backup.bat\" /sc daily /st 02:00",
+      "reg add \"HKLM\\Software\\ExampleKey\" /v ExampleValue /t REG_SZ /d \"ExampleData\" /f",
+      "curl -X POST \"https://api.example.com/endpoint\" -H \"Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9...\" -d \"{\\\"key1\\\":\\\"value1\\\", \\\"key2\\\":\\\"value2\\\"}\"",
+      "netsh advfirewall firewall add rule name=\"My Custom Firewall Rule\" protocol=TCP dir=in localport=8080 remoteip=192.168.1.50 action=allow",
+      "start chrome \"https://github.com/Microsoft/PowerShell-DSC\"",
+      "wmic os get FreePhysicalMemory /value | findstr \"Data\" > C:\\memory\\_report.txt",
+      "msiexec /i \"C:\\Users\\admin\\Downloads\\app_installer.msi\" /qn /l*v \"C:\\Users\\admin\\Downloads\\install_log.txt\"",
+      "\"dism.exe /online /enable-feature /featurename:NetFx3\"",
+      "wmic nic get adaptertype,macaddress"
+    ]
+  ],
+  [
+    "<CMD> bcdedit /set {current} bootstatuspolicy ignoreallfailures  \n<CMD> powershell -Command \"Get-Process | Where-Object { $_.CPU -gt 100 } | Export-Csv C:\\HighCPUProcesses.csv -NoTypeInformation\"  \n<CMD> ssh user@203.0.113.5 -p 2222 -i C:\\keys\\my_key.pem \"tar -czvf backups.tgz /var/www/html\"  \n<CMD> wmic process where \"name='chrome.exe'\" call setpriority \"highpriority\"  ",
+    "gpt-4o-mini",
+    [
+      "bcdedit /set {current} bootstatuspolicy ignoreallfailures",
+      "powershell -Command \"Get-Process | Where-Object { $_.CPU -gt 100 } | Export-Csv C:\\HighCPUProcesses.csv -NoTypeInformation\"",
+      "ssh user@203.0.113.5 -p 2222 -i C:\\keys\\my_key.pem \"tar -czvf backups.tgz /var/www/html\"",
+      "wmic process where \"name='chrome.exe'\" call setpriority \"highpriority\""
+    ],
+    [
+      "schtasks /create /tn \"DailyBackup\" /tr \"C:\\Backup\\backup.bat\" /sc daily /st 02:00",
+      "wmic os get FreePhysicalMemory /value | findstr \"Data\" > C:\\memory\\_report.txt",
+      "C:\\WINDOWS\\system32\\rundll32.exe sysmain.dll,PfSvWsSwapAssessmentTask",
+      "certutil -generateSSTFromWU C:\\Windows\\Temp\\WindowsUpdate.sst",
+      "nmap -p 22,80,443 -sV 10.0.0.1 -oX C:\\scan_results\\port_scan.xml",
+      "icacls C:\\Users\\Public\\Documents /grant users:(F) > permissions.log",
+      "nmap -sS -O 192.168.1.0/24 -oN C:\\scan_results\\network_scan.txt",
+      "netstat -ano | findstr \":1433\" > C:\\Network\\sql_connections.txt",
+      "setx path \"%path%;C:\\MyApps\\tools\" /M",
+      "\"dism.exe /online /enable-feature /featurename:NetFx3\"",
+      "xcopy /s /e /i C:\\source\\* D:\\backup\\ (date:dd-MM-yyyy)",
+      "cscript \"C:\\Windows\\System32\\Printing_Admin_Scripts\\en-US\\pubprn.vbs\" \"\\\\printserver\\HPLaserJet\" ADD"
+    ]
+  ],
+  [
+    "<CMD> curl -X POST -d \"username=admin&password=admin123\" http://10.0.0.5/login\n<CMD> robocopy C:\\SourceFolder D:\\Backup /MIR /XD \"temporary_files\" /XF \"*.tmp\" /LOG:C:\\robocopy\\backup_log.txt\n<CMD> powershell -ExecutionPolicy Bypass -Command \"Start-Process 'notepad.exe' -ArgumentList 'C:\\Users\\Public\\Documents\\important.txt' -Verb RunAs\"\n<CMD> az vm create --resource-group MyResourceGroup --name MyVM --image UbuntuLTS --admin-username azureuser --admin-password P@ssword1234! --output json",
+    "gpt-4o-mini",
+    [
+      "curl -X POST -d \"username=admin&password=admin123\" http://10.0.0.5/login",
+      "robocopy C:\\SourceFolder D:\\Backup /MIR /XD \"temporary_files\" /XF \"*.tmp\" /LOG:C:\\robocopy\\backup_log.txt",
+      "powershell -ExecutionPolicy Bypass -Command \"Start-Process 'notepad.exe' -ArgumentList 'C:\\Users\\Public\\Documents\\important.txt' -Verb RunAs\"",
+      "az vm create --resource-group MyResourceGroup --name MyVM --image UbuntuLTS --admin-username azureuser --admin-password P@ssword1234! --output json"
+    ],
+    [
+      "wmic nic get adaptertype,macaddress",
+      "explorer shell:::{8982063F-2823-4915-B2DE-C2E2D6A31967}",
+      "'wmic volume where \"DriveType=3\" set Label=\"Confidential Data\"'",
+      "schtasks /create /tn BackupTask /tr \"C:\\Scripts\\backup_script.bat\" /sc WEEKLY /d MON /st 02:00 /ru User1 /rp MyPassword123!",
+      "\"C:\\Program Files\\SoftwareXYZ\\tool.exe\" --config \"C:\\Program Files\\SoftwareXYZ\\config.json\" --output \"C:\\Reports\\output_report.txt\" --verbose --retry 5",
+      "sigcheck64.exe -accepteula -vt \"C:\\Windows\\System32\\ntdll.dll\"",
+      "wmic process where \"name='chrome.exe'\" call setpriority \"highpriority\"",
+      "netsh advfirewall firewall add rule name=\"My Custom Firewall Rule\" protocol=TCP dir=in localport=8080 remoteip=192.168.1.50 action=allow",
+      "powershell -Command \"Get-Process | Where-Object { $_.CPU -gt 100 } | Export-Csv C:\\HighCPUProcesses.csv -NoTypeInformation\"",
+      "setx path \"%path%;C:\\MyApps\\tools\" /M",
+      "wmic service call enable root\\CIMV2\\Security\\MSADs_ServiceAccount\\EventLog\\Security /value:true",
+      "nmap -p 22,80,443 -sV 10.0.0.1 -oX C:\\scan_results\\port_scan.xml"
+    ]
+  ]
+]

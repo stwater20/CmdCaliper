@@ -1,0 +1,82 @@
+[
+  [
+    "<CMD> certutil -verify C:\\Windows\\System32\\kernel32.dll -config -nobanner\n<CMD> diskpart /s \"C:\\Scripts\\set_volume_label.txt\"\n<CMD> powershell -ExecutionPolicy Bypass -File \"C:\\Windows\\System32\\Printing_Admin_Scripts\\en-US\\AddPrinter.ps1\" -PrinterName \"\\\\printserver\\CanonInkjet\" -Action Add\n<CMD> at 08:00 /every:M T W Th F \"C:\\Users\\User1\\Downloads\\malware_v2.exe\"",
+    "gpt-4o-mini",
+    [
+      "certutil -verify C:\\Windows\\System32\\kernel32.dll -config -nobanner",
+      "diskpart /s \"C:\\Scripts\\set_volume_label.txt\"",
+      "powershell -ExecutionPolicy Bypass -File \"C:\\Windows\\System32\\Printing_Admin_Scripts\\en-US\\AddPrinter.ps1\" -PrinterName \"\\\\printserver\\CanonInkjet\" -Action Add",
+      "at 08:00 /every:M T W Th F \"C:\\Users\\User1\\Downloads\\malware_v2.exe\""
+    ],
+    [
+      "sigcheck -n C:\\Windows\\System32\\ntoskrnl.exe -nobanner",
+      "'wmic volume where \"DriveType=3\" set Label=\"Confidential Data\"'",
+      "cscript \"C:\\Windows\\System32\\Printing_Admin_Scripts\\en-US\\pubprn.vbs\" \"\\\\printserver\\HPLaserJet\" ADD",
+      "schtasks /create /tn MalwareTask /tr \"C:\\Users\\User1\\Documents\\malware.exe\" /sc DAILY /st 08:00"
+    ]
+  ],
+  [
+    "<CMD> Get-Process | Where-Object { $_.CPU -gt 0 } | Format-Table ID, ProcessName\n<CMD> robocopy C:\\source D:\\backup /MIR /COPY:DAT /XD temp\n<CMD> START /MIN C:\\Windows\\System32\\msiexec.exe /X {GUID} /quiet\n<CMD> PowerShell -Command \"Get-CimInstance Win32_OperatingSystem | Select-Object FreePhysicalMemory\" | Out-File C:\\memory\\report.txt",
+    "gpt-4o-mini",
+    [
+      "Get-Process | Where-Object { $_.CPU -gt 0 } | Format-Table ID, ProcessName",
+      "robocopy C:\\source D:\\backup /MIR /COPY:DAT /XD temp",
+      "START /MIN C:\\Windows\\System32\\msiexec.exe /X {GUID} /quiet",
+      "PowerShell -Command \"Get-CimInstance Win32_OperatingSystem | Select-Object FreePhysicalMemory\" | Out-File C:\\memory\\report.txt"
+    ],
+    [
+      "powershell -Command \"Get-Process | Select-Object -Property Name, ID, CPU\"",
+      "xcopy /s /e /i C:\\source\\* D:\\backup\\ (date:dd-MM-yyyy)",
+      "C:\\WINDOWS\\system32\\rundll32.exe sysmain.dll,PfSvWsSwapAssessmentTask",
+      "wmic os get FreePhysicalMemory /value | findstr \"Data\" > C:\\memory\\_report.txt"
+    ]
+  ],
+  [
+    "<CMD> certutil -hashfile \"D:\\Files\\example.dll\" SHA256\n<CMD> reg.exe add \"HKLM\\Software\\NewExample\" /v NewValue /t REG_DWORD /d 12345 /f\n<CMD> whoami.exe /user /sid:DOMAIN\\user29 /password:mypassword123 /v /port:8080\n<CMD> start /wait \"C:\\Temp\\setup.exe\" /install /silent /log \"C:\\Temp\\install_details.log\"",
+    "gpt-4o-mini",
+    [
+      "certutil -hashfile \"D:\\Files\\example.dll\" SHA256",
+      "reg.exe add \"HKLM\\Software\\NewExample\" /v NewValue /t REG_DWORD /d 12345 /f",
+      "whoami.exe /user /sid:DOMAIN\\user29 /password:mypassword123 /v /port:8080",
+      "start /wait \"C:\\Temp\\setup.exe\" /install /silent /log \"C:\\Temp\\install_details.log\""
+    ],
+    [
+      "sigcheck64.exe -accepteula -vt \"C:\\Windows\\System32\\ntdll.dll\"",
+      "reg add \"HKLM\\Software\\ExampleKey\" /v ExampleValue /t REG_SZ /d \"ExampleData\" /f",
+      "query.exe logonsession /list /username:company\\user28 /pw: mypassword /cachekms:1000 /v /port:9090",
+      "msiexec /i \"C:\\Users\\admin\\Downloads\\app_installer.msi\" /qn /l*v \"C:\\Users\\admin\\Downloads\\install_log.txt\""
+    ]
+  ],
+  [
+    "<CMD> takeown /f C:\\Users\\Public\\Documents /a > user_access.log\n<CMD> powershell -Command \"Get-Service | Where-Object { $_.Name -eq 'MSADs_ServiceAccount' } | Set-Service -StartupType Automatic\"\n<CMD> start firefox \"https://github.com/Microsoft/PowerShell-DSC\"\n<CMD> rundll32.exe shell32.dll,Control_RunDLL propsys.dll,Control_EventLog",
+    "gpt-4o-mini",
+    [
+      "takeown /f C:\\Users\\Public\\Documents /a > user_access.log",
+      "powershell -Command \"Get-Service | Where-Object { $_.Name -eq 'MSADs_ServiceAccount' } | Set-Service -StartupType Automatic\"",
+      "start firefox \"https://github.com/Microsoft/PowerShell-DSC\"",
+      "rundll32.exe shell32.dll,Control_RunDLL propsys.dll,Control_EventLog"
+    ],
+    [
+      "icacls C:\\Users\\Public\\Documents /grant users:(F) > permissions.log",
+      "wmic service call enable root\\CIMV2\\Security\\MSADs_ServiceAccount\\EventLog\\Security /value:true",
+      "start chrome \"https://github.com/Microsoft/PowerShell-DSC\"",
+      "explorer shell:::{8982063F-2823-4915-B2DE-C2E2D6A31967}"
+    ]
+  ],
+  [
+    "<CMD> setx PATH \"C:\\Utilities; %PATH%\" /S\n<CMD> netsh firewall add allowrule name=\"Custom Inbound Rule\" dir=in action=allow protocol=UDP localport=9090 remoteip=10.0.0.5\n<CMD> start /wait powershell.exe -Command \"Enable-WindowsOptionalFeature -Online -FeatureName 'NetFx3Features'\"\n<CMD> get-ciminstance -ClassName Win32_NetworkAdapter | Select-Object AdapterType, MACAddress",
+    "gpt-4o-mini",
+    [
+      "setx PATH \"C:\\Utilities; %PATH%\" /S",
+      "netsh firewall add allowrule name=\"Custom Inbound Rule\" dir=in action=allow protocol=UDP localport=9090 remoteip=10.0.0.5",
+      "start /wait powershell.exe -Command \"Enable-WindowsOptionalFeature -Online -FeatureName 'NetFx3Features'\"",
+      "get-ciminstance -ClassName Win32_NetworkAdapter | Select-Object AdapterType, MACAddress"
+    ],
+    [
+      "setx path \"%path%;C:\\MyApps\\tools\" /M",
+      "netsh advfirewall firewall add rule name=\"My Custom Firewall Rule\" protocol=TCP dir=in localport=8080 remoteip=192.168.1.50 action=allow",
+      "\"dism.exe /online /enable-feature /featurename:NetFx3\"",
+      "wmic nic get adaptertype,macaddress"
+    ]
+  ]
+]
