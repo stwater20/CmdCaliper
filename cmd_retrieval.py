@@ -1,7 +1,7 @@
 import argparse
 import torch
 import torch.nn.functional as F
-from datasets import load_dataset
+from datasets import load_dataset, concatenate_datasets
 from src.inferencer import SentenceTransformerInferencer
 
 class CommandRetriever:
@@ -9,7 +9,7 @@ class CommandRetriever:
 
     def __init__(self, batch_size, device):
         raw_data = load_dataset(self.DATASET_NAME)
-        self.data = raw_data["test"]
+        self.data = self.data = concatenate_datasets([raw_data["test"], raw_data["train"]])
         self.batch_size = batch_size
         self.device = device
 
