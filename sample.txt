@@ -1,0 +1,6 @@
+Loading model: CyCraftAI/CmdCaliper-small
+Querying for similar commands to: powershell -Command "Start-Process C:pathtomaliciousexe.exe -PassThru" -WindowStyle Hidden
+Top similar commands:
+Command: powershell -Command "Start-Process 'C:\path\to\malicious\exe.exe' -PassThru" -WindowStyle Hidden, Similarity Score: 0.8187
+Command: powershell -NoProfile -ExecutionPolicy Bypass -WindowStyle Hidden -File C:\tmp\powershell-malicious-command, Similarity Score: 0.5743
+Command: powershell -ExecutionPolicy bypass -windowstyle hidden -file siphon.ps1, Similarity Score: 0.5627
